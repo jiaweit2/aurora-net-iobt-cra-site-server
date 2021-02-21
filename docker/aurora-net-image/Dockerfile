@@ -23,5 +23,6 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN apt-get install ffmpeg libsm6 libxext6  -y
 #CMD [ "python", "-u", "./your-daemon-or-script.py" ]
 CMD [ "/bin/bash" ]
